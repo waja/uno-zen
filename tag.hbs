@@ -1,6 +1,13 @@
 {{!< default}}
 
-<h1 style="text-align: center;">Tag: {{tag.name}}.</h1>
+<h1 style="text-align: center; margin-bottom: 10px;">Tag: {{tag.name}}.</h1>
+<h3 style="text-align: center; margin: 0; font-size: 1rem;">
+  {{#if tag.description}}
+    {{tag.description}}
+  {{else}}
+    A {{pagination.total}}-post collection
+  {{/if}}
+</h3>
 <ol id="posts-list">
   {{#foreach posts}}
   <li>
